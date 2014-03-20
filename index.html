@@ -1,8 +1,63 @@
 <html>
   <head>
-    <title></title>
+    <title>Slider FM</title>
     <meta content="">
-    <style></style>
+
+    <script type="text/javascript"  src="JS/jquery-1.10.2.js"></script>
+    <script type="text/javascript"  src="JS/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript"  src="JS/fmCarousel.js"></script>
+
+    <style>
+#slider-code2 li {
+display: inline-block;
+}
+#slider-code2 li {
+width: 800px; display: inline-block; 
+float: left;
+}#slider-code2 {
+width: 1200px;
+}
+    </style>
   </head>
-  <body></body>
+  <body>
+
+
+    <div id="slider-code2">
+
+            <a class="buttons prev" >
+            	<img style="height: 30px;display: none;" src="Images/back.png">
+            </a>
+            <div class="viewport">
+                <ul class="overview">
+                        <li class="" >
+                            <img class="smallImagePager"  src="Images/foto1.jpg">
+                        </li>
+                        <li class="" >
+                            <img class="smallImagePager"  src="Images/foto1.jpg">
+                        </li>
+                        <li class="" >
+                            <img class="smallImagePager"  src="Images/foto1.jpg">
+                        </li>
+                        <li class="" >
+                            <img class="smallImagePager" src="Images/foto1.jpg">
+                        </li>
+                </ul>
+            </div>
+            <a class="buttons next">
+            	<img style="height: 30px;" src="Images/next.png">
+            </a>
+
+    </div>
+
+	<script type="text/javascript">
+
+	 var oSmallSlider = $('#slider-code2');
+	     $(document).ready(function(){
+		
+	        oSmallSlider.fmCarrucel({});
+	    });
+
+
+	</script>
+  </body>
 </html>
