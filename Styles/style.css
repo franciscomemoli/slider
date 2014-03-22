@@ -1,0 +1,23 @@
+ 
+#slider-code2 li {
+display: inline-block;
+}
+#slider-code2 li {
+width: 800px; display: inline-block; 
+float: left;
+}
+#slider-code2 {
+width: 900px;
+}
+
+.viewport{
+	overflow: hidden;
+display: inline-block;}
+
+.overview{
+	padding: 0px;margin: 0px;}
+
+#slider-code2 a.buttons {
+display: inline-block;
+width: 30px;
+}

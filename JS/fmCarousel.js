@@ -17,7 +17,7 @@
         options: {  
             size_window:1,
             countE : 5,
-            moveToN:4.5,
+            moveToN:2.5,
             callbackBefore:null, // function that executes before every move.
             callbackAfter:null,// function that executes after every move.
             callbackOnClick:null
@@ -44,7 +44,7 @@
             options.callbackAfter = callback;
         }
         function updateSmallArrows(){
-            limitLeft = -(countE - options.size_window ) * oPages.outerWidth();
+            limitLeft = -((countE - options.size_window ) * oPages.outerWidth()) + oViewport.offset().left;
             leftvaule = oContent.position().left;
             $('.'+oBtnNextClass,root).children().show();
             $('.'+oBtnPrevClass,root).children().show();
@@ -115,7 +115,6 @@
     function getLeftContainer(){
         return oViewport.offset().left - width + (options.size_window * oPages.outerWidth());
     }
-
     function getRightContainer(){
         return oViewport.offset().left;
     }
@@ -130,11 +129,11 @@
     }
 
     function initialize () {
-        
         width = getWithContainer();
+        oContent.width(width+'px');
+        oViewport.width(oPages.children().outerWidth()+'px');
         left = getLeftContainer();
         right = getRightContainer();
-        oContent.width(width+'px');
         if(getCountElements() > options.size_window){
             oContent.draggable({ axis: "x",
                 start: function( event, ui ) {
